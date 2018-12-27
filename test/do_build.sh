@@ -1,8 +1,10 @@
 #!/bin/bash
 
-. ./test/env.sh
+THIS_DIR=$(cd $(dirname ${0}); pwd)
 
-cd trunk/src/build/target/linux_v850e2m
+. ${THIS_DIR}/env.sh
+
+cd ${ATHRILL_HOME}/trunk/src/build/target/linux_v850e2m
 make clean;make
 
 if [ -f ${ATHRILL_HOME}/bin/linux/athrill2 ]
